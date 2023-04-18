@@ -1,6 +1,7 @@
 import { useFonts } from 'expo-font';
 import { StatusBar } from 'expo-status-bar';
-import { LoginScreen } from './src/screens';
+import { ChartTest } from './src/screens';
+import { SafeAreaView } from 'react-native';
 
 import 'intl';
 import 'intl/locale-data/jsonp/pt-BR';
@@ -19,7 +20,9 @@ export default function App() {
   return (
     <>
       <StatusBar style="dark" />
-      <LoginScreen />
+      <SafeAreaView style={{ flex: 1, alignItems: 'center', justifyContent: 'center', marginLeft: 12, marginRight: 12 }}>
+        <ChartTest />
+      </SafeAreaView>
     </>
   );
 }
