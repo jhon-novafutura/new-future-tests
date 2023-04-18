@@ -41,11 +41,11 @@ export const ChartTest = () => {
     <ChartContainer
       onLayout={({nativeEvent}) => setParentWidth(nativeEvent.layout.width)}>
       <ChartHeader>
-        <Text>
+        <Text style={{ fontSize: 14, fontWeight: 600 }}>
           Renda Fixa
         </Text>
         <Chip>
-          <Text>12%</Text>
+          <Text style={{ fontSize: 12, color: '#fff' }}>12%</Text>
         </Chip>
       </ChartHeader>
       <LineChart
@@ -60,14 +60,14 @@ export const ChartTest = () => {
         withOuterLines={false}
         withVerticalLabels={false}
         withHorizontalLabels={false}
-        decorator={() => isVisible && <ChartTooltip tooltip={tooltip} />}
+        decorator={() => isVisible && <ChartTooltip tooltip={tooltip} handleVisibleTootilp={handleVisibleTootilp} />}
         onDataPointClick={({value, x, y, dataset}) =>
           handleVisibleTootilp(value, x, y, dataset)
         }
       />
       <ChartFooter>
-        <Text>R$ 2000,00</Text>
-        <Text>20% do patrimônio</Text>
+        <Text style={{ fontSize: 20, fontWeight: 600 }}>R$ 2000,00</Text>
+        <Text style={{ fontSize: 14 }}>20% do patrimônio</Text>
       </ChartFooter>
     </ChartContainer>
   );

@@ -1,22 +1,22 @@
 import React from 'react';
-import {View} from 'react-native';
+import {Pressable} from 'react-native';
 import {Svg, Rect, Text} from 'react-native-svg';
 
-export const ChartTooltip = ({ tooltip }) => {
+export const ChartTooltip = ({ tooltip, handleVisibleTootilp }) => {
 
   return (
-    <View style={{ alignItems: 'center', justifyContent: 'center'}}>
+    <Pressable onPressIn={handleVisibleTootilp}>
       <Svg>
         <Rect
-          x={tooltip.x - 15}
-          y={tooltip.y + 10}
-          width="200"
+          x={tooltip.x}
+          y={tooltip.y}
+          width="80"
           height="30"
           fill="black"
         />
         <Text
-          x={tooltip.x + 50}
-          y={tooltip.y + 30}
+          x={tooltip.x + 40}
+          y={tooltip.y + 23}
           fill="white"
           fontSize="16"
           fontWeight="bold"
@@ -24,6 +24,6 @@ export const ChartTooltip = ({ tooltip }) => {
           {tooltip.value}
         </Text>
       </Svg>
-    </View>
+    </Pressable>
   );
 };

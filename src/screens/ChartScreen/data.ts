@@ -2,14 +2,7 @@ export const lineData = {
   labels: ['January', 'February', 'March', 'April', 'May', 'June'],
   datasets: [
     {
-      data: [
-        Math.random() * 100,
-        Math.random() * 100,
-        Math.random() * 100,
-        Math.random() * 100,
-        Math.random() * 100,
-        Math.random() * 100
-      ],
+      data: [10, 100, 200, 30, 150, 0],
       strokeWidth: 3
     }
   ]
